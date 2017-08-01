@@ -29,7 +29,7 @@ class listener(StreamListener):
             try:
                 #insert data into database
                 sqlite.save(data={"dat": all_data})
-            return(True)
+         return(True)
 
          except Exception as e:
              print(e)
