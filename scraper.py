@@ -29,11 +29,7 @@ class listener(StreamListener):
             try:
                 #insert data into database
                 sqlite.save(data={"dat": all_data})
-         return(True)
 
-         except Exception as e:
-             print(e)
-             print (all_data)
 
          def on_error(self, status):
              print status
