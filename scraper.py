@@ -31,10 +31,6 @@ class listener(StreamListener):
                 sqlite.save(data={"dat": all_data})
 
 
-         def on_error(self, status):
-             print status
-
-
 auth = OAuthHandler(ckey_, csecret_)
 auth.set_access_token(atoken_, asecret_)
 
