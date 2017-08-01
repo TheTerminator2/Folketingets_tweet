@@ -26,11 +26,10 @@ class listener(StreamListener):
         def on_data(self, data):
             print(data)
             all_data  = json.loads(data)
-
-            #insert data into database
-            sqlite.save(data={"dat": all_data})
-
-   
+            try:
+                #insert data into database
+                sqlite.save(data={"dat": all_data})
+            return(True)
 
          except Exception as e:
              print(e)
